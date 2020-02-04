@@ -65,6 +65,24 @@ Hello, world!
 ```
 You can now publish your cont
 
+## Using Quay.io
+
+You can now publish your container image at a public container registry, such as Quay.io. Red Hat allows you to do so when use UBI.
+
+After you create the php-ubi repository on your Quay.io personal account, you will be able to do:
+
+$ sudo podman login -u "youraccount" quay.io
+Password:
+Login Succeeded!
+$ sudo podman tag localhost/php-ubi quay.io/youraccount/php-ubi
+$ sudo podman push quay.io/youraccount/php-ubi
+...
+Writing manifest to image destination
+Storing signatures
+You can find mine at quay.io/flozanorht/php-ubi.
+
+How minimal is minimal?
+
 ## Building Locally
 
 This project requires Java 8 to compile. It will not compile with Java 9 or later.
