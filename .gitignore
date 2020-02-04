@@ -4,6 +4,7 @@
 *.iws
 .idea/
 build/
+bin/
 
 .project
 .metadata
